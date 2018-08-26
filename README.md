@@ -1,4 +1,4 @@
-#Hero Service Project with Using Angular & Spring Boot
+# Hero Service Project with Using Angular & Spring Boot
 
 This project is just an exercise for using angularJS and spring boot and also combining them.
 On angularJS side, angular hero service tutorial is used. [https://angular.io/guide/quickstart](https://angular.io/guide/quickstart)
@@ -6,7 +6,7 @@ On angularJS side, angular hero service tutorial is used. [https://angular.io/gu
 AngularJS sending rest requests and spring boot is processing them and response them. In spring boot side, h2database is used for hero data. To check tables goto [http://localhost:8081/h2-console](http://localhost:8081/h2-console).
 All database information is configured in application.properties fie.
 
-##How to import project
+## How to import project
 ### Spring boot side
 import maven project into your ide. Then run the project and goto [http://localhost:8081](http://localhost:8081) address.
 
