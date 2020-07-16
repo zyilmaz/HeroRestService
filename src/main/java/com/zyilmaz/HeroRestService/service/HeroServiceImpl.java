@@ -1,28 +1,28 @@
 package com.zyilmaz.HeroRestService.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.zyilmaz.HeroRestService.dao.HeroDAO;
 import com.zyilmaz.HeroRestService.entity.Hero;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
 public class HeroServiceImpl implements HeroService {
 
-	@Autowired
-	private HeroDAO heroDao;
+    private final HeroDAO heroDao;
 
-	@Override
-	public void create(Hero hero) {
-		heroDao.create(hero);
+    public HeroServiceImpl(HeroDAO heroDao) {
+        this.heroDao = heroDao;
+    }
 
-	}
+    @Override
+    public void create(Hero hero) {
+        heroDao.create(hero);
+    }
 
-	@Override
-	public Hero get(Long id) {
-		return heroDao.getHeroById(id);
-	}
+    @Override
+    public Hero get(Long id) {
+        return heroDao.getHeroById(id);
+    }
 
 }
